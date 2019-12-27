@@ -2,10 +2,58 @@
 #Code for Mathematics game
 import tkinter
 import tkinter.ttk as tk
-from tkinter import messagebox
 
 Key=["D","A","B","C","B","C","B","C","D","B"]
 Points=[5,5,7,5,10,5,7,5,5,10]
+
+def msg_sub1(x):
+    def next_():
+        top.destroy()
+        top1.destroy()
+        x()
+    top=tkinter.Toplevel()
+    top.geometry("250x100+120+120")
+    top.title("Success!")
+    label=tkinter.Label(top,text="Good job!")
+    label.pack()
+    b=tkinter.Button(top,text="Ok",command=next_)
+    b.pack()
+def msg_sub2(x):
+    def next_():
+        top.destroy()
+        top1.destroy()
+        x()
+    top=tkinter.Toplevel()
+    top.geometry("250x100+120+120")
+    top.title("Oops")
+    label=tkinter.Label(top,text="Better Luck Next Time!")
+    label.pack()
+    b=tkinter.Button(top,text="Ok",command=next_)
+    b.pack()
+def msg_sub11(x):
+    def next_():
+        top.destroy()
+        window2.destroy()
+        x()
+    top=tkinter.Toplevel()
+    top.geometry("250x100+120+120")
+    top.title("Success!")
+    label=tkinter.Label(top,text="Good job!")
+    label.pack()
+    b=tkinter.Button(top,text="Ok",command=next_)
+    b.pack()
+def msg_sub22(x):
+    def next_():
+        top.destroy()
+        window2.destroy()
+        x()
+    top=tkinter.Toplevel()
+    top.geometry("250x100+120+120")
+    top.title("Oops")
+    label=tkinter.Label(top,text="Better Luck Next Time!")
+    label.pack()
+    b=tkinter.Button(top,text="Ok",command=next_)
+    b.pack()
 
 def Result():
     top1=tkinter.Tk()
@@ -28,11 +76,10 @@ def Ques10():
                 temp=D[p[0].upper()]
                 temp+=Points[9]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Result)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Result()
+            msg_sub2(Result)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -55,11 +102,10 @@ def Ques9():
                 temp=D[p[0].upper()]
                 temp+=Points[8]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques10)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques10()
+            msg_sub2(Ques10)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -82,11 +128,10 @@ def Ques8():
                 temp=D[p[0].upper()]
                 temp+=Points[7]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques9)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques9()
+            msg_sub2(Ques9)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -109,11 +154,10 @@ def Ques7():
                 temp=D[p[0].upper()]
                 temp+=Points[6]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques8)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques8()
+            msg_sub2(Ques8)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -136,11 +180,10 @@ def Ques6():
                 temp=D[p[0].upper()]
                 temp+=Points[5]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques7)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques7()
+            msg_sub2(Ques7)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -163,11 +206,10 @@ def Ques5():
                 temp=D[p[0].upper()]
                 temp+=Points[4]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques6)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques6()
+            msg_sub2(Ques6)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -190,11 +232,10 @@ def Ques4():
                 temp=D[p[0].upper()]
                 temp+=Points[3]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques5)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques5()
+            msg_sub2(Ques5)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -217,11 +258,10 @@ def Ques3():
                 temp=D[p[0].upper()]
                 temp+=Points[2]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques4)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques4()
+            msg_sub2(Ques4)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -244,11 +284,10 @@ def Ques2():
                 temp=D[p[0].upper()]
                 temp+=Points[1]
                 D[p[0].upper()]=temp
-            messagebox.showinfo("Success","Good Job!")
+            msg_sub1(Ques3)
         else:
-            messagebox.showinfo("Oops!","Better Luck Next Time")
-        top1.destroy()
-        Ques3()
+            msg_sub2(Ques3)
+    global top1
     top1=tkinter.Toplevel()
     top1.geometry("900x500+120+120")
     top1.configure(bg="papaya whip")
@@ -273,13 +312,12 @@ def open_window():
                     temp=D[p[0].upper()]
                     temp+=Points[0]
                     D[p[0].upper()]=temp
-                messagebox.showinfo("Success","Good Job!")
+                msg_sub11(Ques2)
             else:
-                messagebox.showinfo("Oops!","Better Luck Next Time")
-            window2.destroy()
-            Ques2()
+                msg_sub22(Ques2)
         count_grp=int(input1.get())
         top.destroy()
+        global window2
         window2=tkinter.Tk()
         window2.geometry("900x500+120+120")
         window2.configure(bg="papaya whip")
